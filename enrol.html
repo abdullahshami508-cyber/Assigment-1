@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course enrolment form for BS Software Engineering students.">
+  <meta name="author" content="Muhammad Abdullah Shami">
+  <meta name="keywords" content="BS Software Engineering, UCP, student portal, web engineering">
+  <title>Course Enrolment | Web Engineering Assignment 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Web Engineering <span>Assignment 1</span></a>
+      <nav class="main-nav" aria-label="Main menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="marks.html">Marks</a></li>
+          <li><a href="enrol.html" aria-current="page">Enrolment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-inner">
+      <h1 id="hero-title">Enrol in your courses.</h1>
+      <p>Provide your details, pick your courses and send the form in a minute.</p>
+      <span class="tag">Semester Enrolment</span>
+    </div>
+  </section>
+
+  <main>
+    <section id="enrol" aria-labelledby="enrol-h">
+      <h2 id="enrol-h">Course Enrolment Form</h2>
+      <p>Fill in every required field. Fields marked <strong>*</strong> are required.</p>
+      <form action="https://formsubmit.co/Abdullahshami508@gmail.com" method="post" enctype="multipart/form-data">
+
+        <fieldset>
+          <legend>Student Information</legend>
+          <div class="field">
+            <label for="fullname">Full name *</label>
+            <input type="text" id="fullname" name="fullname" placeholder="e.g. Muhammad Abdullah Shami" required minlength="3" maxlength="60" pattern="[A-Za-z ]+" title="Letters and spaces only">
+          </div>
+          <div class="field">
+            <label for="regno">Registration number *</label>
+            <input type="text" id="regno" name="regno" placeholder="L1F24BSSE0433" required pattern="[Ll][0-9][Ff][0-9]{2}[A-Za-z]{4}[0-9]{4}" title="Format: L1F24BSSE0433">
+            <p class="hint">Format: L1F24BSSE0433</p>
+          </div>
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="03174963518" required pattern="03[0-9]{9}" title="11 digits starting with 03">
+          </div>
+          <div class="field">
+            <label for="dob">Date of birth</label>
+            <input type="date" id="dob" name="dob" min="1995-01-01" max="2010-12-31">
+          </div>
+          <div class="field">
+            <span>Gender *</span><br>
+            <span class="choice"><input type="radio" id="male" name="gender" value="male" required><label for="male">Male</label></span>
+            <span class="choice"><input type="radio" id="female" name="gender" value="female"><label for="female">Female</label></span>
+            <span class="choice"><input type="radio" id="other" name="gender" value="other"><label for="other">Other</label></span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Course Information</legend>
+          <div class="field">
+            <label for="semester">Semester *</label>
+            <select id="semester" name="semester" required>
+              <option value="">-- Select semester --</option>
+              <option value="1">1st Semester</option>
+              <option value="2">2nd Semester</option>
+              <option value="3">3rd Semester</option>
+              <option value="4">4th Semester</option>
+              <option value="5">5th Semester</option>
+              <option value="6">6th Semester</option>
+              <option value="7">7th Semester</option>
+              <option value="8">8th Semester</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="section">Section</label>
+            <input type="text" id="section" name="section" list="sections" placeholder="Choose or type a section" maxlength="3">
+            <datalist id="sections">
+              <option value="E1"></option>
+              <option value="E2"></option>
+              <option value="E3"></option>
+              <option value="E4"></option>
+              <option value="E5"></option>
+              <option value="E6"></option>
+            </datalist>
+          </div>
+          <div class="field">
+            <label for="maincourse">Main course *</label>
+            <input type="text" id="maincourse" name="maincourse" list="courses" placeholder="Start typing a course name" required>
+            <datalist id="courses">
+              <option value="Web Engineering"></option>
+              <option value="Software Engineering"></option>
+              <option value="Database Systems"></option>
+              <option value="Computer Networks"></option>
+              <option value="Artificial Intelligence"></option>
+              <option value="Theory of Automata"></option>
+              <option value="Design and Analysis of Algorithms"></option>
+              <option value="Software Requirements Engineering"></option>
+            </datalist>
+          </div>
+          <div class="field">
+            <span>Additional courses (select at least one)</span><br>
+            <span class="choice"><input type="checkbox" id="c1" name="extra" value="web"><label for="c1">Web Engineering</label></span>
+            <span class="choice"><input type="checkbox" id="c2" name="extra" value="db"><label for="c2">Database Systems</label></span>
+            <span class="choice"><input type="checkbox" id="c3" name="extra" value="se"><label for="c3">Software Engineering</label></span>
+            <span class="choice"><input type="checkbox" id="c4" name="extra" value="ai"><label for="c4">Artificial Intelligence</label></span>
+          </div>
+          <div class="field">
+            <label for="credits">Credit hours *</label>
+            <input type="number" id="credits" name="credits" min="9" max="21" step="1" value="15" required>
+            <p class="hint">Allowed range: 9 to 21</p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Documents and Comments</legend>
+          <div class="field">
+            <label for="fee">Upload fee challan or transcript (PDF or image)</label>
+            <input type="file" id="fee" name="document" accept=".pdf,.jpg,.jpeg,.png">
+          </div>
+          <div class="field">
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" rows="5" maxlength="300" placeholder="Anything we should know? (max 300 characters)"></textarea>
+          </div>
+          <div class="field">
+            <span class="choice"><input type="checkbox" id="agree" name="agree" required><label for="agree">I confirm the information above is correct. *</label></span>
+          </div>
+        </fieldset>
+
+        <div class="btn-row">
+          <button type="submit">Submit enrolment</button>
+          <button type="reset">Clear form</button>
+        </div>
+      </form>
+    </section>
+
+    <aside aria-labelledby="help-h">
+      <h2 id="help-h">Need Help?</h2>
+      <p>Check your <a href="marks.html">academic record</a> first, or find study material on the <a href="resources.html">resources</a> page.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2>Contact</h2>
+        <address>
+          Muhammad Abdullah Shami<br>
+          Email: <a href="mailto:Abdullahshami508@gmail.com">Abdullahshami508@gmail.com</a><br>
+          Phone: <a href="tel:+923174963518">0317 4963518</a><br>
+          University of Central Punjab (UCP), Lahore
+        </address>
+      </div>
+      <div>
+        <h2>Quick links</h2>
+        <p><a href="index.html">Home</a> | <a href="resources.html">Resources</a> | <a href="marks.html">Marks</a> | <a href="enrol.html">Enrolment</a></p>
+        <p><small>Muhammad Abdullah Shami</small></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

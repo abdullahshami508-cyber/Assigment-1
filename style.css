@@ -1,0 +1,293 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #222222;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  color: orange;
+}
+
+a {
+  color: lightblue;
+}
+
+a:hover {
+  color: yellow;
+}
+
+.site-header {
+  background-color: #111111;
+  padding: 10px 20px;
+  border-bottom: 3px solid orange;
+}
+
+.header-inner {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.brand span {
+  color: orange;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+
+.main-nav a {
+  display: block;
+  padding: 8px 15px;
+  background-color: #444444;
+  color: white;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  background-color: orange;
+  color: black;
+}
+
+.main-nav a[aria-current="page"] {
+  background-color: orange;
+  color: black;
+}
+
+.hero {
+  background-color: #003366;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 36px;
+  margin: 0 0 10px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 0 0 15px 0;
+}
+
+.hero .tag {
+  background-color: orange;
+  color: black;
+  padding: 5px 12px;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+main section, main article, main aside {
+  background-color: #333333;
+  border: 1px solid gray;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+hr {
+  border: 1px solid gray;
+}
+
+mark {
+  background-color: yellow;
+  color: black;
+}
+
+del {
+  color: red;
+}
+
+ins {
+  color: lightgreen;
+}
+
+small {
+  color: lightgray;
+}
+
+.profile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  border: 3px solid white;
+}
+
+.info-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.two-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.two-col > * {
+  flex: 1 1 300px;
+}
+
+figure {
+  margin: 10px 0;
+}
+
+figure img, video {
+  max-width: 100%;
+  border: 1px solid gray;
+}
+
+figcaption {
+  font-style: italic;
+  color: lightgray;
+}
+
+audio {
+  width: 100%;
+}
+
+.video-wrap iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 8px;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #003366;
+}
+
+td.name {
+  text-align: left;
+}
+
+td.grade {
+  color: lightgreen;
+  font-weight: bold;
+}
+
+tfoot th, tfoot td {
+  background-color: #555555;
+}
+
+fieldset {
+  border: 1px solid white;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+}
+
+legend {
+  color: orange;
+  font-weight: bold;
+}
+
+.field {
+  margin-bottom: 12px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"],
+input[type="date"], select, textarea {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.choice {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.choice label {
+  display: inline;
+}
+
+.hint {
+  font-size: 14px;
+  color: lightgray;
+  margin: 3px 0 0 0;
+}
+
+.btn-row button {
+  font-size: 16px;
+  padding: 8px 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.site-footer {
+  background-color: #111111;
+  border-top: 3px solid orange;
+  padding: 15px 20px;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-inner > div {
+  flex: 1 1 300px;
+}
+
+.site-footer h2 {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.site-footer address {
+  font-style: normal;
+}
